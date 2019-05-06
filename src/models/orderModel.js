@@ -10,6 +10,11 @@ var OrderSchema = new Schema({
     },
     orderDate: {
         type: Date,
+        required: true,
+    },
+    customer: {
+        type: Schema.Types.ObjectId,
+        ref: 'Customer',
         required: true
     }
 });
